@@ -1,0 +1,1 @@
+document.body.innerHTML = "<p class='login'>login text.</p><a href='index.html'>Back to Index.</a>";
