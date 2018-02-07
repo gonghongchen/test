@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Get location</title>
+  </head>
+  <body>
+    <script>
+      const _F_func = (O_data) => {
+            console.log(O_data);
+          },
+          _E_script = document.createElement("script");
+
+      _E_script.src = "https://apis.map.qq.com/ws/location/v1/ip?callback=_F_func&key=BRHBZ-EJ5CO-MLHWC-ST77T-Z2T2S-PNFSO&output=jsonp&_=1517991747755";
+
+      document.body.appendChild(_E_script);
+
+    </script>
+  </body>
+</html>
