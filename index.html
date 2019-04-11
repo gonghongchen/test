@@ -22,7 +22,7 @@
     let getData = () => {
       let script = document.createElement('script');
       script.type = 'text/javascript';
-      script.src=`http://hq.sinajs.cn/list=${list.join(',')}`;
+      script.src=`https://hq.sinajs.cn/list=${list.join(',')}`;
       body.appendChild(script);
       script.onload = () => {
         let content = document.getElementById('content');
