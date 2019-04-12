@@ -33,14 +33,21 @@
           let p = document.createElement('p');
           let data = window[varHead + item].split(',');
           let name = data[0];
+          let todayStart = data[1];
           let lastDayEnd = data[2];
           let now = data[3];
           let highest = data[4];
           let lowest = data[5];
+          let position = '上行';
           let range = showText(now, lastDayEnd);
           let highestRange = showText(highest, lastDayEnd);
           let lowestRange = showText(lowest, lastDayEnd);
-          p.innerHTML = name + ' ' + range + ' 高：' + highestRange + ' 低：' + lowestRange;
+          if (todayStart <= lastDayEnd && now <= lastDayEnd) {
+            position = '下行';
+          } else if (todayStart >= lastDayEnd || now >= lastDayEnd) {
+            position = '平行';
+          }
+          p.innerHTML = name + ' ' + range + ' 高：' + highestRange + ' 低：' + lowestRange + ' ' + position;
           content.append(p);
         });
         content = null;
